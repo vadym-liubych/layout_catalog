@@ -1,13 +1,14 @@
 .catalog {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $card-width);
+  gap: 0 48px;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, $card-width);
+  }
 
   &__card {
-    margin: 0 24px;
     margin-top: 50px;
   }
 }
